@@ -3,7 +3,8 @@ angularShop.controller('ShopController', function($scope, $http) {
 	$scope.list_of_products = [];
 	$scope.basket = [];
 
-	$http.get("https://api.myjson.com/bins/312z9")
+	//$http.get("https://api.myjson.com/bins/312z9") unfortunately, myjson.com is down
+	$http.get("./products.json")
 		.success(function(data){
 			$scope.list_of_products = data;
 		})
@@ -26,17 +27,34 @@ angularShop.controller('ShopController', function($scope, $http) {
 				quantity: 1	
 			});
 		}	
-
-		console.log($scope.basket);
 	}
 
 	$scope.productPreviouslyAdded = function(product) {
 		for (var i = 0; i < $scope.basket.length; i++) {
 			if ($scope.basket[i]["id"] === (product.id)) {
-				console.log($scope.basket);
 				return $scope.basket[i]["quantity"] += 1;
 			}
 		}
+	}
+
+	$scope.numberOfItemsInBasket = function() {
+		var total = 0;
+		for (var i = 0; i < $scope.basket.length; i++) {
+			total += $scope.basket[i]["quantity"];
+		}
+		return total;
+	}
+
+	$scope.totalAmount = function() {
+		var totalAmount = 0;
+		for (var i = 0; i < $scope.basket.length; i++) {
+			totalAmount += $scope.basket[i]["quantity"] * $scope.basket[i]["price"];
+		}
+		return totalAmount.toFixed(2);
+	}
+
+	$scope.removeProductFromBasket = function(index) {
+		$scope.basket.splice(index, 1);
 	}
 
 });

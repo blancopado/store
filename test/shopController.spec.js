@@ -25,5 +25,12 @@ describe('shopController', function() {
     scope.addProductToBasket("product");
     expect(scope.basket.length).toBe(1);
     expect(scope.basket[0]["quantity"]).toBe(2);
-  }); 
+  });
+
+  it('can remove a product from the basket', function() {
+    scope.addProductToBasket("product");
+    expect(scope.basket.length).toBe(1);
+    scope.removeProductFromBasket(0);
+    expect(scope.basket.length).toBe(0);
+  });
 });

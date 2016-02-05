@@ -1,3 +1,54 @@
-div {
-  background-color: #F8F8FF;
+body {
+	background-color: #F0F0F0 ;
+}
+
+.navbar-inverse #dropdown {
+  color: white;
+  padding-top: 8px;
+}
+
+.dropdown-menu {
+  max-width: 300px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.dropdown-header {
+	color: black;
+	font-size: 14px;
+}
+
+.dropdown-bottom {
+	color: black;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 20px;
+	padding: 15px;
+}
+
+.dropdown-menu:hover {
+	display: block;
+}
+
+#basket_list {
+	font-size: 12px;
+}
+
+.list-of-items {
+	outline-color: red;
+	margin: 60px 10px;
+	text-align: center;
+}
+
+#selling-items {
+	padding: 25px;
+	margin: 15px 15px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 0 0 15px #ddd;
+	background: #fff;
+}
+
+.product-name {
+	padding-top: 15px;
 }
