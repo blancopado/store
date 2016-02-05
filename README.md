@@ -15,6 +15,15 @@ I have left the $http.get request to https://api.myjson.com/bins/312z9 commented
 	
 	$http.get("./products.json")
 
+I have completed the first three user stories:
+
+1. As a User I can add a product to my shopping cart.
+2. As a User I can remove a product from my shopping cart.
+3. As a User I can view the total price for the products in my shopping
+cart.
+
+I didn't have time to complete any other story :(
+
 
 ##Instructions:
 
