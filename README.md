@@ -7,14 +7,6 @@ This is how the front-end app looks like:
 ![Alt text](./screenshots/screenshot.png)
 
 
-I used 'www.myjson.com' in order to store product data in a JSON file, but unfortunately, this website is down at the moment. Google Chrome does not allow HTTP request using XMLHttpRequest from a local file so this App should be run on Firefox.
-
-I have left the $http.get request to https://api.myjson.com/bins/312z9 commented out in case that the website is back online:
-
-	//$http.get("https://api.myjson.com/bins/312z9") unfortunately, myjson.com is down  
-	
-	$http.get("./products.json")
-
 I have completed the first three user stories:
 
 1. As a User I can add a product to my shopping cart.
@@ -38,6 +30,6 @@ brew install node
 npm install -g bower
 
 
-There isn't any back-end scaffolding, so after cloning the repo in your computer, 'cd' in the app directory and run 'bower install' and 'npm install'. Then run the App by opening the index.html file in a Firefox browser.
+There isn't any back-end scaffolding, so after cloning the repo in your computer, 'cd' in the app directory and run 'bower install' and 'npm install'. Then start a server: "http-server".
 
 Thank you!

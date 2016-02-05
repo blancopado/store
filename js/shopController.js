@@ -3,7 +3,7 @@ angularShop.controller('ShopController', function($scope, $http) {
 	$scope.list_of_products = [];
 	$scope.basket = [];
 
-	//$http.get("https://api.myjson.com/bins/312z9") unfortunately, myjson.com is down
+
 	$http.get("./products.json")
 		.success(function(data){
 			$scope.list_of_products = data;
